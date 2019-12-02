@@ -1,0 +1,15 @@
+$ sudo iptables -A INPUT -s 192.168.43.95 -p icmp --icmp-type echo-reply -m limit --limit 39/minute --limit-burst 14 -j DROP
+
+
+Machine A - 192.168.43.95
+Machine B - 192.168.43.197 
+Machine C - 192.168.43.1
+
+
+From machine A(192.168.43.95) :  ping -t 192.168.43.197
+
+--ping for 60 sec----
+
+-- after 30 sec----
+
+ping from device C (192.168.43.1)

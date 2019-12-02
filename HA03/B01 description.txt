@@ -1,0 +1,5 @@
+MACHINE - A
+$ sudo iptables -A OUTPUT -d 192.168.43.95 -p udp -m limit --limit 39/minute --limit-burst 14 -j ACCEPT
+
+MACHINE - B
+$ sudo iptables -A OUTPUT -d 192.168.43.197 -p udp -m limit --limit 39/minute --limit-burst 14 -j drop
